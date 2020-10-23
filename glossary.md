@@ -23,6 +23,12 @@ A trend exists when there is a long-term increase or decrease in the data. It do
 ### Seasonal
 A seasonal pattern occurs when a time series is affected by seasonal factors such as the time of the year or the day of the week. Seasonality is always of a fixed and known frequency.
 
+#### seasonal stationary
+A time series where the seasonal component has been removed is called seasonal stationary. A time series with a clear seasonal component is referred to as non-stationary.
+
+#### Seasonal Adjustment / Deseasonalizing
+Once seasonality is identified, it can be modeled. The model of seasonality can be removed from the time series. This process is called Seasonal Adjustment, or Deseasonalizing.
+
 ### Cyclic
 A cycle occurs when the data exhibit rises and falls that are not of a fixed frequency.
 
