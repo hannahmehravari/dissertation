@@ -73,6 +73,13 @@ y′′t=y′t−y′t−1
 
 In this case, y′′t will have T−2 values. Then, we would model the “change in the changes” of the original data. In practice, it is almost never necessary to go beyond second-order differences.
 
+### Unit root tests
+One way to determine more objectively whether differencing is required is to use a unit root test. These are statistical hypothesis tests of stationarity that are designed for determining whether differencing is required.
+
+Kwiatkowski-Phillips-Schmidt-Shin (KPSS) test is one of these. In this test, the null hypothesis is that the data are stationary, and we look for evidence that the null hypothesis is false. Consequently, small p-values (e.g., less than 0.05) suggest that differencing is required. 
+
+This process of using a sequence of KPSS tests to determine the appropriate number of first differences is carried out by the function [ndiffs()](http://alkaline-ml.com/pmdarima/1.5.1/modules/generated/pmdarima.arima.ndiffs.html).
+
 
 ## Other links:
 
