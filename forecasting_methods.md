@@ -9,22 +9,8 @@
 ### Python Library
 - [statsmodels](https://pypi.org/project/statsmodels/).tsa.arima_model.[ARIMA](https://www.statsmodels.org/stable/generated/statsmodels.tsa.arima_model.ARIMA.html)
 
-
-## Autoregressive conditional heteroskedasticity (ARCH) model
+## Long Short-Term Memory (LSTM) network
 ### Inputs
-- Prewhitened residual series that is uncorrelated and contains no trends or seasonal changes
-- The number of lag squared residual errors
-### Python library
-- [arch](https://pypi.org/project/arch/)
-## Generalized autoregressive conditional heteroskedasticity (GARCH) model
-### Inputs
-- The number of lag variances
-- The number of lag residual errors
-- Does the time series have to be prewhitened ?
-### Python library
-- [arch](https://pypi.org/project/arch/)
 
 
-## Autoregressive (AR) model
-## Autoregressive–moving-average (ARMA) model
-## Moving-average (MA) model
+### Python Library
