@@ -8,19 +8,19 @@ sequenceDiagram
     participant SMARTStop
     par Collect New Training Data
     loop Predefined sample rate
-    ML API->>SMARTStop: Request Wind Speed Sample
+    ML API->>SMARTStop: Request Wind Speed/Direction Sample
     SMARTStop->>Turbine Mounted Sensors:Request Turbine Data
     Turbine Mounted Sensors->>SMARTStop: Return Turbine Data
-    SMARTStop->>ML API: Return Wind Speed Sample
-    ML API ->> Training Set: New wind speed sample
+    SMARTStop->>ML API: Return Wind Speed/Direction Sample
+    ML API ->> Training Set: New wind Speed/Direction sample
     end
     and Retrain and Replace Active Forecasting Model
-    ML API->>+Wind Speed Training Module:Request Newly Trained Model
-    Wind Speed Training Module->>Training Set:Request New Training Data
-    Training Set->>Wind Speed Training Module: Return New Training Data
-    Wind Speed Training Module->>Forecasting Model: Request Newly Trained Model
-    Forecasting Model->>Wind Speed Training Module: Return Newly Trained Model
-    Wind Speed Training Module->> ML API: Return Newly Trained Model
+    ML API->>+Wind Speed/Direction Training Module:Request Newly Trained Model
+    Wind Speed/Direction Training Module->>Training Set:Request New Training Data
+    Training Set->>Wind Speed/Direction Training Module: Return New Training Data
+    Wind Speed/Direction Training Module->>Forecasting Model: Request Newly Trained Model
+    Forecasting Model->>Wind Speed/Direction Training Module: Return Newly Trained Model
+    Wind Speed/Direction Training Module->> ML API: Return Newly Trained Model
     and Plan Turbine Stops
     loop every time active forecasting model is replaced
     SMARTStop->>ML API:Request Turbine Statuses
