@@ -69,7 +69,7 @@
 ## Week 7
 ## 12 Nov 2020
 * *1 hour* Meeting with supervisor
-* *2 hours* Read [https://assets.amazon.science/8e/63/5bfdb1bb419491ba26ce3b219369/continual-learning-in-practice.pdf](https://assets.amazon.science/8e/63/5bfdb1bb419491ba26ce3b219369/continual-learning-in-practice.pdf)
+* *2 hours* Read [Continual Learning in Practice](https://assets.amazon.science/8e/63/5bfdb1bb419491ba26ce3b219369/continual-learning-in-practice.pdf)
 * *1 hour* Read Machine Learning Architecture and Design Patterns by H Washizaki et al.
 * *1 hour* Read [An Intro to Threading in Python](https://realpython.com/intro-to-python-threading/)
 
