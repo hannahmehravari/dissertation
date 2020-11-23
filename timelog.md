@@ -50,8 +50,6 @@
 
 
 ## Week 5
-### 26 Oct 2020
-
 ### 29 Oct 2020
 * *1 hour* Meeting with surpervisor to look at my data analysis Jupyter notebooks and answer some questions about my findings
 * *3 hours* Reading about machine learning models for time series forecasting
