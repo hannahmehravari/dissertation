@@ -65,7 +65,7 @@ sequenceDiagram
     Sampler->>Joiner:Sample 
     Joiner->>Data Monitoring:Sample Transformed to Required Format
     Note over Data Monitoring,Business Logic: Self-Diagnosis
-    Data Monitoring->>Model Policy Engine:Data Statistics<br>(Possible Anomalies, Drift, and Change-Points)
+    Data Monitoring->>Model Policy Engine:Data Statistics (Possible Anomalies, Drift, and Change-Points)
     Prediction Monitoring->>Model Policy Engine:Prediction Statistics   
     Business Logic->>Model Policy Engine: Business Metrics
     alt If Prediction Error > Limit
