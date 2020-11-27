@@ -57,7 +57,7 @@ sequenceDiagram
     par Prediction Monitoring
     Database->>Sampler:Wind Data
     Sampler->>Joiner:Sample 
-    Joiner->>Predictor:Transformed Sample
+    Joiner->>Predictor:Sample Transformed to Required Format
     Predictor->>Prediction Monitoring:Predictions
     par Hypervisor
     Note over Database, Trainer: Self-Correction: Determining whether or not the model should be retrained
@@ -71,7 +71,7 @@ sequenceDiagram
     alt If Prediction Error > Limit
     Database->>Sampler:Wind Data
     Sampler->>Joiner:Sample 
-    Joiner->>Trainer:Transformed Sample
+    Joiner->>Trainer:Sample Transformed to Required Format
     Trainer->>Predictor: Replace Predictor
     end
     end
