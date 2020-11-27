@@ -58,6 +58,7 @@ sequenceDiagram
     Database->>Sampler:Wind Data
     Sampler->>Joiner:Sample 
     Joiner->>Predictor:Sample Transformed to Required Format
+    Note over Predictor, Prediction Monitoring: To compare predictions to real life wind events
     Predictor->>Prediction Monitoring:Predictions
     par Hypervisor
     Note over Database, Trainer: Self-Correction: Determining whether or not the model should be retrained
