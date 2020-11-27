@@ -75,5 +75,8 @@
 * No work was completed due to personal problems.
 
 ## Week 9
-### 23 Nov 2020
+### 26 Nov 2020
+* *5 hours* Redesigning the systems architecture based on [this paper](https://assets.amazon.science/8e/63/5bfdb1bb419491ba26ce3b219369/continual-learning-in-practice.pdf)
+### 27 Nov 2020
+* *1 hour* Meeting with supervisor
 
