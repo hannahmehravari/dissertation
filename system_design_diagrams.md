@@ -45,7 +45,7 @@ sequenceDiagram
 ### AutoML API
 ```mermaid
 sequenceDiagram
-    participant SMARTStop
+    participant Database
     participant Sampler
     participant Joiner
     participant Trainer
@@ -55,22 +55,21 @@ sequenceDiagram
     participant Business Logic
     participant Model Policy Engine
     par Prediction Monitoring
-    SMARTStop->>Sampler:Wind Data
+    Database->>Sampler:Wind Data
     Sampler->>Joiner:Sample 
     Joiner->>Predictor:Transformed Sample
     Predictor->>Prediction Monitoring:Predictions
     par Hypervisor
-    Note over SMARTStop, Model Policy Engine: Self-Correction: Determining whether or not the model should be retrained
-    SMARTStop->>Sampler:Push(Wind Speed, Wind Direction Data)
+    Note over Database, Trainer: Self-Correction: Determining whether or not the model should be retrained
+    Database->>Sampler:Push(Wind Speed, Wind Direction Data)
     Sampler->>Joiner:Sample 
-    Joiner->>Data Monitoring:Sample Transformed<br>to Required Format
+    Joiner->>Data Monitoring:Sample Transformed to Required Format
     Note over Data Monitoring,Business Logic: Self-Diagnosis
     Data Monitoring->>Model Policy Engine:Data Statistics<br>(Possible Anomalies, Drift, and Change-Points)
     Prediction Monitoring->>Model Policy Engine:Prediction Statistics   
     Business Logic->>Model Policy Engine: Business Metrics
     alt If Prediction Error > Limit
-    Model Policy Engine->>Trainer: Kick off new training job
-    SMARTStop->>Sampler:Wind Data
+    Database->>Sampler:Wind Data
     Sampler->>Joiner:Sample 
     Joiner->>Trainer:Transformed Sample
     Trainer->>Predictor: Replace Predictor
