@@ -79,3 +79,28 @@ sequenceDiagram
     end
 ```
 
+### Turbine Curtailment
+```mermaid
+sequenceDiagram
+    participant SpeedxDirection Histogram
+    participant AutoML API
+    participant Campaign Runner
+    participant Future Turbine Status Queue
+    participant SMARTStop
+    SpeedxDirection Histogram->>Campaign Runner: Remaining Measurements to be taken
+    AutoML API->>Campaign Runner:Upcoming Wind Speeds and Directions
+    Note over Campaign Runner,Future Turbine Status Queue: if required wind event upcoming
+    Campaign Runner->>Future Turbine Status Queue: Schedule Turbine Status Change 
+    Future Turbine Status Queue->>SMARTStop: Turbine Status
+
+```
+
+### Maintaining Training Set
+```mermaid
+sequenceDiagram
+    participant SMARTStop
+    participant Data Streamer
+    participant Database
+    SMARTStop->>Data Streamer:Wind Speed and Wind Direction Data
+    Data Streamer->>Database:New Entry to training/validation data
+```
