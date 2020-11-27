@@ -61,7 +61,7 @@ sequenceDiagram
     Predictor->>Prediction Monitoring:Predictions
     par Hypervisor
     Note over Database, Trainer: Self-Correction: Determining whether or not the model should be retrained
-    Database->>Sampler:Push(Wind Speed, Wind Direction Data)
+    Database->>Sampler:Wind Data
     Sampler->>Joiner:Sample 
     Joiner->>Data Monitoring:Sample Transformed to Required Format
     Note over Data Monitoring,Business Logic: Self-Diagnosis
