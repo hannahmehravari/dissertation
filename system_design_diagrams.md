@@ -54,35 +54,26 @@ sequenceDiagram
     participant Prediction Monitoring
     participant Business Logic
     participant Model Policy Engine
-    autonumber
     par Prediction Monitoring
-    rect rgba(0, 255, 255, .1)
     SMARTStop->>Sampler:Wind Data
     Sampler->>Joiner:Sample 
     Joiner->>Predictor:Transformed Sample
     Predictor->>Prediction Monitoring:Predictions
-    end
     par Hypervisor
-    rect rgba(0, 255, 255, .1)
     Note over SMARTStop, Model Policy Engine: Self-Correction: Determining whether or not the model should be retrained
     SMARTStop->>Sampler:Push(Wind Speed, Wind Direction Data)
     Sampler->>Joiner:Sample 
     Joiner->>Data Monitoring:Sample Transformed<br>to Required Format
-    rect rgba(0, 0, 255, .1)
     Note over Data Monitoring,Business Logic: Self-Diagnosis
     Data Monitoring->>Model Policy Engine:Data Statistics<br>(Possible Anomalies, Drift, and Change-Points)
     Prediction Monitoring->>Model Policy Engine:Prediction Statistics   
     Business Logic->>Model Policy Engine: Business Metrics
-    end
-    end
     alt If Prediction Error > Limit
-    rect rgba(0, 255, 255, .1)
     Model Policy Engine->>Trainer: Kick off new training job
     SMARTStop->>Sampler:Wind Data
     Sampler->>Joiner:Sample 
     Joiner->>Trainer:Transformed Sample
     Trainer->>Predictor: Replace Predictor
-    end
     end
     end
     end
