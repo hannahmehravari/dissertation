@@ -87,4 +87,5 @@
 *2 hours* Experimenting with sci-kit learn's ARIMA class and trying to forecast the averaged time series of a turbines
 
 ### 2 Dec 2020
-*5 hours* Experimenting with grid searching SARIMA hyperparameters
+*1 hour* Set an Azure Machine Learning environment for cloud training
+*4 hours* Experimenting with grid searching SARIMA hyperparameters
