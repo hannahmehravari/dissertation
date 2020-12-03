@@ -83,9 +83,9 @@
 
 ## Week 10
 ### 1 Dec 2020
-*1 hour* Watching a youtube video explaining the theory of the ARIMA process
-*2 hours* Experimenting with sci-kit learn's ARIMA class and trying to forecast the averaged time series of a turbines
+* *1 hour* Watching a youtube video explaining the theory of the ARIMA process
+* *2 hours* Experimenting with sci-kit learn's ARIMA class and trying to forecast the averaged time series of a turbines
 
 ### 2 Dec 2020
-*1 hour* Set an Azure Machine Learning environment for cloud training
-*4 hours* Experimenting with grid searching SARIMA hyperparameters
+* *1 hour* Set an Azure Machine Learning environment for cloud training
+* *4 hours* Experimenting with grid searching SARIMA hyperparameters
