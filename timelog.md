@@ -85,3 +85,6 @@
 ### 1 Dec 2020
 *1 hour* Watching a youtube video explaining the theory of the ARIMA process
 *2 hours* Experimenting with sci-kit learn's ARIMA class and trying to forecast the averaged time series of a turbines
+
+### 2 Dec 2020
+*5 hours* Experimenting with grid searching SARIMA hyperparameters
