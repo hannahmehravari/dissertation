@@ -89,3 +89,9 @@
 ### 2 Dec 2020
 * *1 hour* Set an Azure Machine Learning environment for cloud training
 * *4 hours* Experimenting with grid searching SARIMA hyperparameters
+
+### 3 Dec 2020
+* *4 hours* Working on grid searching using a GPU, still no success
+
+### 4 Dec 2020
+* *1 hour* Meeting with supervisor
