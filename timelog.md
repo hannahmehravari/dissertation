@@ -96,3 +96,4 @@
 ### 4 Dec 2020
 * *1 hour* Meeting with supervisor which solves my blocker of not knowing how to configure/grid search ARIMA
 * *4 hours* Created notebooks exploring the accuracy of forecasting both wind speed and direction using ARIMA, either using an aggregated time series or single time series
+* *2 hours* Installing Zookeeper and Kafka
