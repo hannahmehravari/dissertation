@@ -100,3 +100,11 @@
 
 ### 5 Dec 2020
 * *2 hours* Create a Kafka message producer, topic and consumer to listen to simulated live turbine data
+
+## Week 11
+### 7 Dec 2020
+* *2 hours* Create 2D histograms (heatmaps) of both predictions and real data and experiment with create a MSE heatmap
+
+## Week 12
+### 14 Dec 2020
+* *1 hour* Meeting with supervisor
