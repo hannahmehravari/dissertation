@@ -95,3 +95,37 @@
 
 ### 4 Dec 2020
 * *1 hour* Meeting with supervisor
+
+## Week 11
+### 10 Dec 2020
+* *2 hour* Preparing progress update for RES contacts
+
+## Week 12
+### 14 Dec 2020
+* *1 hour* Meeting with supervisor
+* *3 hours* Writing progress report to submit to moodle and send to supervisor
+
+### 18 Dec 2020
+* *1 hour* Added final touches to progress report and submitted.
+
+## Week 13
+* Holidays 
+## Week 14
+* Holidays
+## Week 15
+* Holidays
+
+## Week 16
+* No work done due to preparing for new semester courses
+
+## Week 17
+### 14 Jan 2021
+* *1 hour* Meeting with RES contacts to gather new requirements and discuss potential trial run
+
+## Week 18
+### 19 Jan 2021
+* *1 hour* Meeting with supervisor
+## Week 19
+### 25 Jan 2020
+* *30 mins* Downloaded new 30s data to resample
+
