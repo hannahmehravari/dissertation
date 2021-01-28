@@ -1,3 +1,5 @@
+from statsmodels.tsa.arima_model import ARIMA
+
 class PredictionMaker:
     def __init__(self, time_step=1, p=1, q=1, d=0):
         self.time_step = time_step
