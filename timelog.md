@@ -149,4 +149,6 @@
 * *2 hours* Work on resampling 30s data to 2 minute data
 ### 28 Jan 2021
 * *3 hours* Create new graph on the timeline from 2 minute predictions to turbine commands based on RES contact's corrections and comments.
+* *2 hours* Set up a REST API skeleton
+* *2 hours* Investigating suitable architecture for the system given the new requirements that about from my exchange with my RES contact when talking through the graphs.
 
