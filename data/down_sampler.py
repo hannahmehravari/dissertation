@@ -1,4 +1,4 @@
-class Downsampler:
+class DownSampler:
     def __init__(self):
         pass
 
