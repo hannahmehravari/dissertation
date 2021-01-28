@@ -1,16 +1,16 @@
 from flask import Flask
 from flasgger import Swagger
-from api.route.home import home_api
+from api.route.required_run_state import required_run_state
 
 def create_app():
     app = Flask(__name__)
 
     app.config['SWAGGER'] = {
-        'title': 'Flask API Starter Kit',
+        'title': 'Noise Campaign API',
     }
     swagger = Swagger(app)
 
-    app.register_blueprint(home_api, url_prefix='/api')
+    app.register_blueprint(required_run_state)
 
     return app
 
