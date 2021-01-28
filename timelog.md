@@ -139,6 +139,10 @@
 ### 19 Jan 2021
 * *1 hour* Meeting with supervisor
 ## Week 19
-### 25 Jan 2020
-* *30 mins* Downloaded new 30s data to resample
+### 25 Jan 2021
+* *30 mins* Downloaded new 30s Scadinavian data to resample
+* *2 hours* Experimented with predicted Scandinavian data with the developed prediction methods
+### 26 Jan 2021
+* *4 hours* Create a graphic using matplotlib to demonstrate the time taken to predict the wind speed and direction at each time step for the next period and send to RES contact
+* *1 hour* Meeting with supervisor
 
