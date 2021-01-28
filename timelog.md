@@ -145,4 +145,8 @@
 ### 26 Jan 2021
 * *4 hours* Create a graphic using matplotlib to demonstrate the time taken to predict the wind speed and direction at each time step for the next period and send to RES contact
 * *1 hour* Meeting with supervisor
+### 27 Jan 2021
+* *2 hours* Work on resampling 30s data to 2 minute data
+### 28 Jan 2021
+* *3 hours* Create new graph on the timeline from 2 minute predictions to turbine commands based on RES contact's corrections and comments.
 
