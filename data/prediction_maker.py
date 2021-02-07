@@ -5,7 +5,7 @@ class PredictionMaker:
         self.time_step = time_step
         self.p = p
         self.q = q
-        self.d = d
+        self.d = d 
 
     def make_prediction(training_data):
         model = ARIMA(training_data, order=(self.p, self.q, self.d))
