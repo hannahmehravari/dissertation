@@ -2,6 +2,7 @@ version: '3.8'
 
 services: 
     api-service:
+        container_name: api
         build: ./api/
         volumes: 
             - ./api/:/usr/src/app/
