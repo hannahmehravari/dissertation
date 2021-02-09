@@ -1,5 +1,5 @@
 # Proactive and Reactive Decision Making Over Wind Turbine Time Series Data
-
+![pipeline](https://github.com/hannahmehravari/dissertation/workflows/pipeline/badge.svg)
 ## How to Run
 in the root directory, run:
 ```
