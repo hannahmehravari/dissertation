@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Build the stack
+      - name: Build the containers
         run: docker-compose up -d
-      - name: Test
-        run: docker exec -it dissertation_default echo pytest
+      - name: Run Python tests
+        run: docker-compose exec app pytest
