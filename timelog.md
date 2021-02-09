@@ -152,3 +152,11 @@
 * *2 hours* Set up a REST API skeleton
 * *2 hours* Investigating suitable architecture for the system given the new requirements that about from my exchange with my RES contact when talking through the graphs.
 
+## Week 18
+### 7 Feb 2021
+* *2 hours* Researching InfluxDB
+
+## Week 19
+### 8 Feb 2021
+* *1 hour* Meeting with supervisor
+* *5 hours* Installing docker, debugging setup, dockerising API, setting up InfluxDB
