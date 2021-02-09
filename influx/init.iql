@@ -1,0 +1,9 @@
+CREATE DATABASE "vardafjellet"
+CREATE RETENTION POLICY "1_hour" ON "vardafjellet" DURATION 1h REPLICATION 1 DEFAULT
+CREATE RETENTION POLICY "a_year" ON "vardafjellet" DURATION 52w REPLICATION 1
+CREATE CONTINUOUS QUERY "cq_2m" ON "vardafjellet" BEGIN
+    SELECT mean("wind_speed") AS "mean_wind_speed",mean("wind_direction") AS "mean_wind_direction"
+    INTO "a_year"."downsampled_site_data"
+    FROM "site_data"
+    GROUP BY time(2m)
+END
