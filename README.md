@@ -1,5 +1,16 @@
 # Proactive and Reactive Decision Making Over Wind Turbine Time Series Data
 
+## How to Run
+in the root directory, run:
+```
+docker-compose build
+docker-compose up
+```
+
+API is hosted on `localhost:5000`
+Database is hosted on `localhost:8086`
+
+
 ## System Overview
 
 ### AutoML API
