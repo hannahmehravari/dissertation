@@ -3,9 +3,9 @@ version: '3.8'
 
 services: 
     api-service:
-        build: ./api-predictor/
+        build: ./api/
         volumes: 
-            - ./api-predictor/:/usr/src/app/
+            - ./api/:/usr/src/app/
         ports: 
             - 5000:5000
         environment: 
@@ -16,11 +16,11 @@ services:
             - influxdb
 
     influxdb:
-        build: ./influx/
+        build: ./influxdb/
         expose:
             - "8086"
         volumes:
-            - './influx/:/var/lib/influxdb'
+            - './influxdb/:/var/lib/influxdb'
 
 
 

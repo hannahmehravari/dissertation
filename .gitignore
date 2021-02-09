@@ -128,8 +128,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-influx/data
-influx/meta
-influx/wal
+influxdb/data
+influxdb/meta
+influxdb/wal
 
 .vscode
