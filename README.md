@@ -8,8 +8,13 @@ docker-compose up
 ```
 
 API is hosted on `localhost:5000`
+
 Database is hosted on `localhost:8086`
 
+## Running Tests
+```
+pytest
+```
 
 ## System Overview
 
