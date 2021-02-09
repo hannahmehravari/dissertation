@@ -10,4 +10,4 @@ jobs:
       - name: Build the containers
         run: docker-compose up -d
       - name: Run Python tests
-        run: docker-compose exec -T api pytest
+        run: docker-compose exec api-service pytest
