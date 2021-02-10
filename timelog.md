@@ -163,3 +163,6 @@
 
 ### 9 Feb 2021
 * *3 hours* Writing some tests and setting up a GitHub Actions CI
+
+### 10 Feb 2021
+* *7 hours* Connecting the API to the InfluxDB and to set up Chronograf to see whether or not the testing request sent with Postman made it through.
