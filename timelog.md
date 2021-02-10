@@ -160,3 +160,6 @@
 ### 8 Feb 2021
 * *1 hour* Meeting with supervisor
 * *5 hours* Installing docker, debugging setup, dockerising API, setting up InfluxDB
+
+### 9 Feb 2021
+* *3 hours* Writing some tests and setting up a GitHub Actions CI
