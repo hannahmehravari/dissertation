@@ -19,5 +19,6 @@ class MeasuredState:
             measurement_list.append(turbine[measurement])
         return mean(measurement_list)
 
+
         
 
