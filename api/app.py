@@ -1,16 +1,84 @@
 import os
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from influxdb import InfluxDBClient
+import json
+from noise_campaign.measured_state import MeasuredState
+
 app = Flask(__name__)
-db_client = InfluxDBClient(host='influxdb', port=8086)
+db_client = InfluxDBClient(host=os.getenv("DB_HOST"), port=os.getenv("DB_PORT"))
 
-#we define the route /
-@app.route('/hi')
+
+@app.route("/turbineStatus", methods=["POST"])
 def welcome():
-    # return a json
-    return jsonify({'status': db_client.get_list_database()})
 
-if __name__ == '__main__':
-    #define the localhost ip and the port that is going to be used
-    # in some future article, we are going to use an env variable instead a hardcoded port 
-    app.run(host='0.0.0.0', port=os.getenv('PORT'))
+    measured_state = MeasuredState(request.json)
+
+    return jsonify(
+        {
+            "wind speed": measured_state.average_wind_speed,
+            "wind direction": measured_state.average_wind_direction,
+            "timestamp": measured_state.timestamp,
+        }
+    )
+
+
+if __name__ == "__main__":
+    # define the localhost ip and the port that is going to be used
+    # in some future article, we are going to use an env variable instead a hardcoded port
+    app.run(host="0.0.0.0", port=os.getenv("API_PORT"))
+
+
+"""
+{
+  ""turbines"":
+    [
+      {
+        ""id"": ""Garreg Lywd.WTG01"",
+        ""measuredRunState"": ""Started"",
+        ""averagedWindSpeed"": 10.3,
+        ""averagedWindDirection"": 183.0,
+        ""averagedRotorRPM"": 6.1,
+        ""timestampUTC"": ""2018-10-16T12:01:00Z""
+      },
+      {
+        ""id"": ""Garreg Lywd.WTG03"",
+        ""measuredRunState"": ""Paused"",
+        ""averagedWindSpeed"": 12.3,
+        ""averagedWindDirection"": 193.0,
+        ""averagedRotorRPM"": 0.0,
+        ""timestampUTC"": ""2018-10-16T12:01:35Z""
+      },
+      {
+        ""id"": ""Garreg Lywd.WTG04"",
+        ""measuredRunState"": ""Unknown"",
+        ""averagedWindSpeed"": 11.3,
+        ""averagedWindDirection"": 196.0,
+        ""averagedRotorRPM"": 5.9,
+        ""timestampUTC"": ""2018-10-16T12:01:35Z""
+      }
+    ]
+}
+"""
+
+"""
+{
+  ""turbines"":
+    [
+      {
+        ""id"": ""Garreg Lywd.WTG01"",
+        ""requiredRunState"": ""Started"",
+        ""timestampUTC"": ""2018-10-16T12:01:00Z""
+      },
+      {
+        ""id"": ""Garreg Lywd.WTG03"",
+        ""requiredRunState"": ""Paused"",
+        ""timestampUTC"": ""2018-10-16T12:01:35Z""
+      },
+      {
+        ""id"": ""Garreg Lywd.WTG04"",
+        ""requiredRunState"": ""Unknown"",
+        ""timestampUTC"": ""2018-10-16T12:01:35Z""
+      }
+    ]
+}
+"""
