@@ -41,7 +41,7 @@ def test_measured_state_wind_direction():
 def test_measured_state_timestamp():
     measured_state = MeasuredState(data_dict)
 
-    expected_timestamp = datetime.strptime('2018-10-16T12:01:00Z', '%Y-%m-%dT%H:%M:%S%z')
+    expected_timestamp = '2018-10-16T12:01:00Z'
     actual_timestamp = measured_state.timestamp
 
     assert expected_timestamp == actual_timestamp
