@@ -3,15 +3,17 @@ from flask import Flask, jsonify, request
 from influxdb import InfluxDBClient
 import json
 from noise_campaign.measured_state import MeasuredState
+from noise_campaign.data_handler import DataHandler
 
 app = Flask(__name__)
 db_client = InfluxDBClient(host=os.getenv("DB_HOST"), port=os.getenv("DB_PORT"))
 
 
 @app.route("/turbineStatus", methods=["POST"])
-def welcome():
+def get_turbine_status():
 
     measured_state = MeasuredState(request.json)
+    data_handler = DataHandler(db_client)
 
     return jsonify(
         {
@@ -23,8 +25,6 @@ def welcome():
 
 
 if __name__ == "__main__":
-    # define the localhost ip and the port that is going to be used
-    # in some future article, we are going to use an env variable instead a hardcoded port
     app.run(host="0.0.0.0", port=os.getenv("API_PORT"))
 
 """
