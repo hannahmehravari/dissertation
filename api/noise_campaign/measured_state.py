@@ -10,9 +10,7 @@ class MeasuredState:
         self.timestamp = self._get_time_stamp(data_dict)
 
     def _get_time_stamp(self, data_dict):
-        timestamp_string = data_dict['turbines'][0]['timestampUTC']
-        timestamp_datetime = datetime.strptime(timestamp_string, '%Y-%m-%dT%H:%M:%S%z')
-        return timestamp_datetime
+        return data_dict['turbines'][0]['timestampUTC']
 
     def _extract_average_measurement(self, data_dict, measurement):
         turbines = data_dict['turbines']
