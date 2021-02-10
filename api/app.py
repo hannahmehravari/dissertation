@@ -27,39 +27,6 @@ if __name__ == "__main__":
     # in some future article, we are going to use an env variable instead a hardcoded port
     app.run(host="0.0.0.0", port=os.getenv("API_PORT"))
 
-
-"""
-{
-  ""turbines"":
-    [
-      {
-        ""id"": ""Garreg Lywd.WTG01"",
-        ""measuredRunState"": ""Started"",
-        ""averagedWindSpeed"": 10.3,
-        ""averagedWindDirection"": 183.0,
-        ""averagedRotorRPM"": 6.1,
-        ""timestampUTC"": ""2018-10-16T12:01:00Z""
-      },
-      {
-        ""id"": ""Garreg Lywd.WTG03"",
-        ""measuredRunState"": ""Paused"",
-        ""averagedWindSpeed"": 12.3,
-        ""averagedWindDirection"": 193.0,
-        ""averagedRotorRPM"": 0.0,
-        ""timestampUTC"": ""2018-10-16T12:01:35Z""
-      },
-      {
-        ""id"": ""Garreg Lywd.WTG04"",
-        ""measuredRunState"": ""Unknown"",
-        ""averagedWindSpeed"": 11.3,
-        ""averagedWindDirection"": 196.0,
-        ""averagedRotorRPM"": 5.9,
-        ""timestampUTC"": ""2018-10-16T12:01:35Z""
-      }
-    ]
-}
-"""
-
 """
 {
   ""turbines"":
