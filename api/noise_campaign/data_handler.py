@@ -1,4 +1,5 @@
 from noise_campaign.measured_state import MeasuredState
+
 class DataHandler:
 
     def __init__(self, db_client):
@@ -12,7 +13,7 @@ class DataHandler:
                 {
                     "measurement": "wind_speed",
                     "tags": {},
- #                   "time": measured_state.timestamp,
+                    "time": measured_state.timestamp,
                     "fields": {
                         "value": measured_state.average_wind_speed
                     }
