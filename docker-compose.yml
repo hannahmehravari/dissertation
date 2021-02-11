@@ -27,6 +27,7 @@ services:
         environment: 
             INFLUXDB_CONTINUOUS_QUERIES_ENABLED: 1
             INFLUXDB_CONTINUOUS_QUERIES_RUN_INTERVAL: 30s
+            INFLUXDB_CONTINUOUS_QUERIES_LOG_ENABLED: 1
             
     chronograf:
         image: chronograf:latest

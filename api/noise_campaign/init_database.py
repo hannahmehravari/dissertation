@@ -10,5 +10,8 @@ def init_db():
     select_clause = 'SELECT mean("wind_speed") AS "mean_wind_speed", mean("wind_direction") AS "mean_wind_direction"  INTO "1_week"."2min_sample" FROM "30s_sample" GROUP BY time(2m)'
     db_client.create_continuous_query("cq_2m", select_clause, database="observed_data")
 
+    db_client.create_database("predicted_data")
+    db_client.create_database("turbine_status")
+
     return db_client
 
