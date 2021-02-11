@@ -24,6 +24,9 @@ services:
             - "8086"
         volumes:
             - influxdb-storage:/var/lib/influxdb
+        environment: 
+            INFLUXDB_CONTINUOUS_QUERIES_ENABLED: 1
+            INFLUXDB_CONTINUOUS_QUERIES_RUN_INTERVAL: 30s
             
     chronograf:
         image: chronograf:latest
@@ -39,10 +42,8 @@ services:
 volumes:
     chronograf-storage:
         name: chronograf-storage
-        external: true
     influxdb-storage:
         name: influxdb-storage
-        external: true
 
 
 
