@@ -1,14 +1,12 @@
 import os
 from flask import Flask, jsonify, request
-from influxdb import InfluxDBClient 
 import json
 from noise_campaign.measured_state import MeasuredState
 from noise_campaign.data_handler import DataHandler
+from noise_campaign.init_database import init_db
 
 app = Flask(__name__)
-db_client = InfluxDBClient(
-    host=os.getenv("DB_HOST"), port=os.getenv("DB_PORT")
-)
+db_client = init_db()
 
 @app.route("/turbineStatus", methods=["POST"])
 def get_turbine_status():

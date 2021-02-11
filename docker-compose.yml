@@ -6,7 +6,7 @@ services:
         build: ./api/
         volumes: 
             - ./api/:/usr/src/app/
-        ports: 
+        ports:
             - 5000:5000
         environment: 
             API_PORT: 5000
@@ -19,24 +19,33 @@ services:
             - influxdb
 
     influxdb:
-        build: ./influxdb/
+        image: influxdb
         expose:
             - "8086"
         volumes:
-            - './influxdb/:/var/lib/influxdb'
+            - influxdb-storage:/var/lib/influxdb
             
     chronograf:
         image: chronograf:latest
         ports:
-        - '127.0.0.1:8888:8888'
+        - '8888:8888'
         volumes:
         - chronograf-storage:/var/lib/chronograf
         depends_on:
         - influxdb
         environment:
             INFLUXDB_URL: http://influxdb:8086
+
 volumes:
-  chronograf-storage:
+    chronograf-storage:
+        name: chronograf-storage
+        external: true
+    influxdb-storage:
+        name: influxdb-storage
+        external: true
+
+
+
 
 
         
