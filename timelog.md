@@ -166,3 +166,6 @@
 
 ### 10 Feb 2021
 * *7 hours* Connecting the API to the InfluxDB and to set up Chronograf to see whether or not the testing request sent with Postman made it through.
+
+### 11 Feb 2021
+* *5 hours* Learning InfluxQL/Flux CLI in order to investigate the best way to initialise the db on build, opted for using the Python interface instead
