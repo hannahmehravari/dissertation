@@ -4,12 +4,15 @@ import json
 from noise_campaign.measured_state import MeasuredState
 from noise_campaign.data_handler import DataHandler
 from noise_campaign.init_database import init_db
+from noise_campaign.histogram import Histogram
 
 app = Flask(__name__)
 db_client = init_db()
 
 @app.route("/turbineStatus", methods=["POST"])
 def get_turbine_status():
+
+    histogram = Histogram
 
     measured_state = MeasuredState(request.json)
     data_handler = DataHandler(db_client)

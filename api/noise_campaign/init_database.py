@@ -11,7 +11,9 @@ def init_db():
     db_client.create_continuous_query("cq_2m", select_clause, database="observed_data")
 
     db_client.create_database("predicted_data")
+    db_client.create_retention_policy("1_hour", "1h", 1, "predicted_data", default=True)
     db_client.create_database("turbine_status")
+    db_client.create_retention_policy("1_week", "7d", 1, "turbine_status", default=True)
 
     return db_client
 

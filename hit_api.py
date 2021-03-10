@@ -13,8 +13,8 @@ payload = {
       {
         "id": "Garreg Lywd.WTG01",
         "measuredRunState": "Started",
-        "averagedWindSpeed": 12.3,
-        "averagedWindDirection": 150.0,
+        "averagedWindSpeed": 8.3,
+        "averagedWindDirection": 200.0,
         "averagedRotorRPM": 6.1,
         "timestampUTC": date_time
       }
