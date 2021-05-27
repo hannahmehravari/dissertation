@@ -12,12 +12,21 @@ db_client = init_db()
 @app.route("/turbineStatus", methods=["POST"])
 def get_turbine_status():
 
-    histogram = Histogram
+    histogram = Histogram()
 
     measured_state = MeasuredState(request.json)
     data_handler = DataHandler(db_client)
 
     data_handler.write_measured_state(measured_state)
+      # data handler also correct wind speed to 10 meters
+    # data handler get new training set
+    # give training set to prediction maker
+      # prediction maker apply error correction
+    # prediction maker give prediction
+    # data handler write prediction to prediction table
+    # give prediction to histogram to determine bin
+    # data handler check database histogram for counts of stop/run
+    # return status required based on histogram counts
 
     return jsonify(
         {
