@@ -1,4 +1,4 @@
-from histogram import Histogram
+from noise_campaign.histogram import Histogram
 class PredictedState:
     def __init__(self, average_wind_speed, average_wind_direction, timestamp):
         self.average_wind_speed = average_wind_speed
