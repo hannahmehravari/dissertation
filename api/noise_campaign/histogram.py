@@ -1,6 +1,5 @@
 import numpy as np
 
-
 class Histogram:
     def __init__(
         self,
