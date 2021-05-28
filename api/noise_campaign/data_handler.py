@@ -14,6 +14,8 @@ class DataHandler:
         point_dict["fields"] = {
             "wind_speed": measured_state.average_wind_speed,
             "wind_direction": measured_state.average_wind_direction,
+            "speed_bin" : measured_state.speed_bin,
+            "direction_bin" : measured_state.direction_bin
         }
 
         self.db_client.write_points([point_dict])
