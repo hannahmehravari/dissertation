@@ -19,7 +19,8 @@ services:
             - influxdb
 
     influxdb:
-        image: influxdb
+        image: influxdb:latest
+        container_name: influxdb
         expose:
             - ${DB_PORT}
         volumes:
@@ -28,23 +29,29 @@ services:
             INFLUXDB_CONTINUOUS_QUERIES_ENABLED: 1
             INFLUXDB_CONTINUOUS_QUERIES_RUN_INTERVAL: 30s
             INFLUXDB_CONTINUOUS_QUERIES_LOG_ENABLED: 1
+            # INFLUXDB_ADMIN_USER: admin
+            # INFLUXDB_ADMIN_PASSWORD: Welcome1 
             
-    chronograf:
-        image: chronograf:latest
+    grafana:
+        image: grafana/grafana:latest
+        container_name: grafana
+        restart: always
         ports:
-        - ${CHRONOGRAF_PORT}:${CHRONOGRAF_PORT}
+            - '3000:3000'
         volumes:
-        - chronograf-storage:/var/lib/chronograf
+            - grafana-storage:/var/lib/grafana
+            - ./grafana-provisioning/:/etc/grafana/provisioning
         depends_on:
-        - influxdb
-        environment:
-            INFLUXDB_URL: http://${DB_HOST}:${DB_PORT}
+            - influxdb
+        # environment:
+        #     - GF_SECURITY_ADMIN_USER=${GRAFANA_USERNAME}
+        #     - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD}
 
 volumes:
-    chronograf-storage:
-        name: chronograf-storage
     influxdb-storage:
         name: influxdb-storage
+    grafana-storage:
+        name: grafana-storage
 
 
 
