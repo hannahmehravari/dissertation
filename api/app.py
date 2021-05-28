@@ -12,11 +12,10 @@ db_client = init_db()
 @app.route("/turbineStatus", methods=["POST"])
 def get_turbine_status():
 
-    histogram = Histogram()
-
-    measured_state = MeasuredState(request.json)
+    histogram = Histogram(3, 12, 1, 12)
     data_handler = DataHandler(db_client)
-
+    
+    measured_state = MeasuredState(histogram, request.json)
     data_handler.write_measured_state(measured_state)
       # data handler also correct wind speed to 10 meters
     # data handler get new training set
