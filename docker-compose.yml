@@ -8,11 +8,8 @@ services:
             - ./api/:/usr/src/app/
         ports:
             - ${API_PORT}:${API_PORT}
-        environment: 
-            API_PORT: ${API_PORT}
-            DB_PORT: ${DB_PORT}
-            PYTHONPATH: ./api/:/usr/src/app/
-            DB_HOST: ${DB_HOST}
+        env_file:
+            - .env
         depends_on:
             - influxdb
         links:
