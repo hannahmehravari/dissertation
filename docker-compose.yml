@@ -34,15 +34,13 @@ services:
         container_name: grafana
         restart: always
         ports:
-            - '3000:3000'
+            - ${GRAFANA_PORT}:${GRAFANA_PORT}
         volumes:
             - grafana-storage:/var/lib/grafana
             - ./grafana-provisioning/:/etc/grafana/provisioning
         depends_on:
             - influxdb
-        # environment:
-        #     - GF_SECURITY_ADMIN_USER=${GRAFANA_USERNAME}
-        #     - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD}
+
 
 volumes:
     influxdb-storage:
