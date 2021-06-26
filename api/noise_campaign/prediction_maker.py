@@ -11,5 +11,6 @@ class PredictionMaker:
         model = ARIMA(training_data, order=(self.p, self.d, self.q))
         model_fit = model.fit(disp=0)
         output = model_fit.forecast(self.time_step)
+        print(output)
         yhat = output[0].flatten()[0]
         return yhat
