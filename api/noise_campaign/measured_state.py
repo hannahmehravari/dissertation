@@ -20,8 +20,7 @@ class MeasuredState:
 
     def _get_time_stamp(self, data_dict):
         d = datetime.strptime(data_dict['turbines'][0]['timestampUTC'], "%Y-%m-%dT%H:%M:%SZ")
-        d.replace(tzinfo=pytz.UTC)
-        return d
+        return pytz.utc.localize(d)
 
     def _extract_average_measurement(self, data_dict, measurement):
         turbines = data_dict['turbines']
