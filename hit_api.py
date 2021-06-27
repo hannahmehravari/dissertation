@@ -33,6 +33,6 @@ for index, row in scada_data.iterrows():
 
   print(response.text)
 
-  status = response.json()['state']
+  status = response.json()['turbines'][0]['requiredRunState']
 
-  time.sleep(0.5)
+  # time.sleep(0.5)
