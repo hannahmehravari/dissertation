@@ -12,7 +12,7 @@ def sample_is_from_previous_period(last_sample_time, data_handler):
 
 def sample_is_from_new_period(last_sample_time, data_handler):
     time_diff = last_sample_time - data_handler.get_last_timestamp_in_10_minute_measurement()
-    return (time_diff < dt.timedelta(minutes=8) and time_diff.total_seconds() > 0)
+    return (time_diff <= dt.timedelta(minutes=8) and time_diff.total_seconds() > 0)
 
 def downsample_30s_samples(data_handler, status, histogram):
     latest_samples = data_handler.get_latest_samples()
