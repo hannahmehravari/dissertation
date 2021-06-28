@@ -1,5 +1,4 @@
 # Proactive and Reactive Decision Making Over Wind Turbine Time Series Data
-![pipeline](https://github.com/hannahmehravari/dissertation/workflows/pipeline/badge.svg)
 
 Supporting code for Hannah Mehravari's final year masters project.
 
