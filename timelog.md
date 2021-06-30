@@ -169,3 +169,109 @@
 
 ### 11 Feb 2021
 * *5 hours* Learning InfluxQL/Flux CLI in order to investigate the best way to initialise the db on build, opted for using the Python interface instead
+
+## Week 19
+No work done due to circumstances discussed in Good Cause Submission
+## Week 20
+No work done due to circumstances discussed in Good Cause Submission
+## Week 21
+No work done due to circumstances discussed in Good Cause Submission
+## Week 22
+No work done due to circumstances discussed in Good Cause Submission
+## Week 23
+No work done due to circumstances discussed in Good Cause Submission
+## Week 24
+No work done due to circumstances discussed in Good Cause Submission
+## Week 25
+Project on hold - Exam season (Discussed in good cause submission)
+
+## Week 26
+Project on hold - Exam season (Discussed in good cause submission)
+
+## Week 27
+Project on hold - Exam season (Discussed in good cause submission)
+
+## Week 28
+Project on hold - Exam season (Discussed in good cause submission)
+
+## Week 29
+Project on hold - Exam season (Discussed in good cause submission)
+
+## Week 30
+
+### 31 May 2021
+* *5 hours* Project resumed, spent some time rounding up outstanding tasks and planning work for the next couple of weeks
+
+### 1 Jun 2021
+* *7 hours* Collecting evaluation data for the developed baseline ARIMA model using the RES bins and the predicting the raw values as well as attempting to use an error correction methodology to remedy to errors. Also produced some graphs.
+
+### 2 Jun 2021
+* *7 hours* Collecting evaluation data for the 1st modified ARIMA model using the modified bins and the predicting the raw values as well as attempting to use an error correction methodology to remedy to errors. Also produced some graphs.
+
+### 3 Jun 2021
+* *7 hours* Collecting evaluation data for the 2nd modified ARIMA model using a wind speed and directio bin time series to predict the bins directly and attempting to use an error correction methodology to remedy to errors. Also produced some graphs.
+
+### 4 Jun 2021
+* *7 hours* Wrote the report literature review
+
+### 5 Jun 2021
+* *7 hours* Did some planning for developing the decision making algorithm as well as changing the dashboard solution from Chronograf to Grafana since Grafana supported custome plotly graphs which I needed to make the live histogram to work
+
+### 6 Jun 2021
+* *7 hours* Wrote a python class to interface with the influxdb instance in order to use when the decision making algorithm was implemented.
+
+## Week 31
+
+### 6 Jun 2021
+* *7 hours* Wrote the decision making algorithm and spent time debugging as I was struggling with time alignment.
+
+### 6 Jun 2021
+* *7 hours* Wrote the main wind forecasting section of the dissertation report
+
+### 7 Jun 2021
+* *7 hours* Spent some time editing the wind forecasting section of the report
+
+### 8 Jun 2021
+* *12 hours* Tying all the different system components together and did some manual testing to ensure the componenets were behaving as expected
+
+### 9 Jun 2021
+* *12 hours* Time spent on refining the decision making algorithm, debugging and refactoring.
+
+### 10 Jun 2021
+* *12 hours* Ran trial of the system by mocking out the turbine control software and imitating it's behaviour. Analysed the data export for the system's decision accuracy and made a demo video showing the live Grafana dashboard update in real-time
+
+## Week 32
+
+### 12 Jun 2021
+* *7 hours* Started writing the system implementation section and produced some diagrams for visualising the system architecture and decision making algorithm
+
+### 13 Jun 2021
+* *7 hours* Editing the system implementation section.
+
+### 14 Jun 2021
+* *7 hours* Writing the conclusion and future work sections
+
+### 15 Jun 2021
+* *7 hours* Writing the problem background and proposed solution sections
+
+## Week 33
+
+### 19 Jun 2021
+* *7 hours* Writing the abstract, introduction and tying the dissertation together.
+
+### 20 Jun 2021
+* *7 hours* Editing the dissertation, producing and refining results tables, figured and the structure of the paper.
+
+### 21 Jun 2021
+* *7 hours* Organising the GitHub repository and removing unused files and dependancies.
+
+## Week 34
+
+### 28 Jun 2021
+* *7 hours* Editing and proofreading the report
+
+### 29 Jun 2021
+* *7 hours* Creating the slides and script for the final presentation and recording it.
+
+### 30 Jun 2021
+* *7 hours* Submitting the project, report and presentation

@@ -2,7 +2,7 @@
 
 Supporting code for Hannah Mehravari's final year masters project.
 
-![Grafana Screenshot](front_end.png)
+![Grafana Screenshot](front_end.gif)
 
 ## How to Run System
 in the root directory, run:
