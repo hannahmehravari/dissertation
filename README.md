@@ -1,6 +1,6 @@
 # Proactive and Reactive Decision Making Over Wind Turbine Time Series Data
 
-Supporting code for Hannah Mehravari's final year masters project.
+Supporting code for Hannah Mehravari's final year masters project. The accompanying dissertation report can be read [here](https://github.com/hannahmehravari/dissertation/blob/main/report.pdf).
 
 ![Grafana Screenshot](front_end.gif)
 
@@ -13,7 +13,7 @@ docker-compose up
 Refer to the `.env` file to configure the system setting and ports.
 
 ## How to Simulate Turbine Control Software
-While the above command are running, in the root directory, run:
+While the above commands are running, in the root directory, run:
 ```
 conda env create --name envname --file=notebooks/environments.yml
 conda activate dissertation
